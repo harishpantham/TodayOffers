@@ -50,7 +50,7 @@ public class HomeController {
 		
 		return "hi";
 	}
-	//testas
+	
 	@GetMapping("/")
 	public String home() {
 	
