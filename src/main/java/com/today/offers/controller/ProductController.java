@@ -15,8 +15,7 @@ import com.today.offers.model.Product;
 import com.today.offers.serviceI.ProductServiceI;
 import com.today.offers.utils.OffersResponse;
 
-@RestController()
-@RequestMapping("api")
+@RestController
 public class ProductController {
 
     @Autowired
