@@ -34,6 +34,7 @@ public class HomeController {
 	@ResponseBody
 	@GetMapping("/hello")
 	public String hi(Model model) {
+		//test changes
 		/*Role role = new Role();
 		User user = new User();
 		user.setUserName("test user2");
