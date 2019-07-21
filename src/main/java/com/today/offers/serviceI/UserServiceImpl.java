@@ -156,6 +156,7 @@ public class UserServiceImpl implements UserServiceI{
 	public OffersResponse getUserByUserNameAndPassword(UserDTO userDTO) {
 		OffersResponse offersResponse = new OffersResponse();
 		if(userDTO !=null) {
+			try {
 			Optional<User> optionalUser = userRepository.findByUserNameAndPassword(userDTO.getUserName(), userDTO.getPassword());
 			if(optionalUser.isPresent()) {
 				List<User> userList = new ArrayList<>();
@@ -167,7 +168,12 @@ public class UserServiceImpl implements UserServiceI{
 				offersResponse.setStatus(HttpStatus.NOT_FOUND.value());
 				offersResponse.setMessage(messageService.getMessage("user.not.found"));
 			}
+			}
+			catch(Exception e) {
+				e.printStackTrace();
+			}
 		}
+		
 		else {
 			offersResponse.setStatus(HttpStatus.BAD_REQUEST.value());
 			offersResponse.setMessage(messageService.getMessage("invalid.data"));

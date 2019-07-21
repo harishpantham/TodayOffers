@@ -13,7 +13,7 @@ import com.today.offers.dto.UserDTO;
 import com.today.offers.serviceI.UserServiceI;
 import com.today.offers.utils.OffersResponse;
 
-@RestController()
+@RestController
 @RequestMapping("api")
 public class UserController {
 
