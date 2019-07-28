@@ -73,7 +73,7 @@ body {
 <body>
 <div class="navbar" >
   
-  <a href="/logout" class="active">Home</a>
+  <a href="/" class="active">Logout</a>
   
 </div>
 <div class="body">
